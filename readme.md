@@ -5,11 +5,12 @@
   <a href="https://twitter.com/_Epistol_">
     <img alt="Twitter: _Epistol_" src="https://img.shields.io/twitter/follow/_Epistol_.svg?style=social" target="_blank" />
   </a>
-    [![GitHub issues](https://img.shields.io/github/issues/Epistol/PolyMany-MediaLibrary)](https://github.com/Epistol/PolyMany-MediaLibrary/issues)
+</p>
+
+[![GitHub issues](https://img.shields.io/github/issues/Epistol/PolyMany-MediaLibrary)](https://github.com/Epistol/PolyMany-MediaLibrary/issues)
     [![GitHub license](https://img.shields.io/github/license/Epistol/PolyMany-MediaLibrary)](https://github.com/Epistol/PolyMany-MediaLibrary)
         ![GitHub language count](https://img.shields.io/github/languages/count/Epistol/PolyMany-MediaLibrary)
-    
-</p>
+        
 
 > An example project to display how the spatie mediaLibrary could handle a polymorphic many to many db.
 
