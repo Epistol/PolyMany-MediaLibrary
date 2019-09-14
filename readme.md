@@ -1,33 +1,91 @@
+
 ![header](https://user-images.githubusercontent.com/6005885/61215709-e336a980-a70b-11e9-9e94-a9a02c259921.png)
 
-<h1 align="center">Welcome to PolyMany MediaLibrary 👋</h1>
-<p>
-  <a href="https://twitter.com/_Epistol_">
-    <img alt="Twitter: _Epistol_" src="https://img.shields.io/twitter/follow/_Epistol_.svg?style=social" target="_blank" />
-  </a>
-</p>
+# Welcome to PolyMany MediaLibrary 👋
+
+<p align="center">
 
 [![GitHub issues](https://img.shields.io/github/issues/Epistol/PolyMany-MediaLibrary)](https://github.com/Epistol/PolyMany-MediaLibrary/issues)
     [![GitHub license](https://img.shields.io/github/license/Epistol/PolyMany-MediaLibrary)](https://github.com/Epistol/PolyMany-MediaLibrary)
         ![GitHub language count](https://img.shields.io/github/languages/count/Epistol/PolyMany-MediaLibrary)
-        
+        [![Laravel 5.8](https://img.shields.io/badge/Laravel-5.8-orange)](https://img.shields.io/badge/Laravel-5.8-orange)
+        [![GitHub forks](https://img.shields.io/github/forks/Epistol/PolyMany-MediaLibrary)](https://github.com/Epistol/PolyMany-MediaLibrary/network)
+</p>
 
-> An example project to display how the spatie mediaLibrary could handle a polymorphic many to many db.
+Based on an empty Laravel 5.8, this repository shows how the [ Spatie Media Library]([https://github.com/spatie/laravel-medialibrary](https://github.com/spatie/laravel-medialibrary))  could handle a polymorphic many to many DB.
 
-> And it ryhmes.
+### Install
 
-
-## Install
-
-```sh
+```bash
 git clone
+composer install
 npm install
+php artisan key:generate
 ```
 
-## Description
+### Getting Started
 
-Based on an empty Laravel package, this repository shows how 
-the Spatie Media Library could handle a polymorphic many to many DB.
+Follow the install instructions to init Laravel, copy the .env.example file to a .env file and set your database information to get started. Then generate the data to it via 
+```bash
+php artisan migrate --seed
+```
+
+### How it works 
+
+#### Database
+
+A Mediable table is added to have a many-to-many polymorphic relationship possible to any model that has a media : 
+
+```php
+Schema::create('mediables', function (Blueprint $table) {
+
+$table->integer("media_id");
+
+$table->integer("mediable_id");
+
+$table->string("mediable_type");
+
+$table->string("tag");
+
+$table->integer("order");
+
+$table->timestamps();
+
+});
+```
+
+#### Trait
+
+To add the possibility for the models to have this polymorphic link, we create a trait : 
+
+```php
+<?php
+
+namespace App\Traits;
+
+trait HasMediaTuto
+
+{
+
+/**
+
+* @return mixed
+
+*/
+
+public function medias()
+
+{
+
+return $this->morphToMany(\App\Media::class, 'mediable');
+
+}
+
+}
+```
+
+And in any model plus your user model  : ``` use HasMediaTuto ```
+
 
 ## Author
 
