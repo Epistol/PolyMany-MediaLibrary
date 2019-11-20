@@ -4,7 +4,9 @@
 # Welcome to PolyMany MediaLibrary 👋
 
 <p align="center">
+    
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
+    
 [![forthebadge](https://forthebadge.com/images/badges/made-with-vue.svg)](https://forthebadge.com)
     
 [![GitHub issues](https://img.shields.io/github/issues/Epistol/PolyMany-MediaLibrary)](https://github.com/Epistol/PolyMany-MediaLibrary/issues)
