@@ -7,8 +7,6 @@
     
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
     
-[![forthebadge](https://forthebadge.com/images/badges/made-with-vue.svg)](https://forthebadge.com)
-    
 [![GitHub issues](https://img.shields.io/github/issues/Epistol/PolyMany-MediaLibrary)](https://github.com/Epistol/PolyMany-MediaLibrary/issues)
     [![GitHub license](https://img.shields.io/github/license/Epistol/PolyMany-MediaLibrary)](https://github.com/Epistol/PolyMany-MediaLibrary)
         ![GitHub language count](https://img.shields.io/github/languages/count/Epistol/PolyMany-MediaLibrary)
